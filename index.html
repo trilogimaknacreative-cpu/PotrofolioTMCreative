@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TRILOGI MAKNA CREATIVE - Vendor dokumentasi profesional untuk corporate, gathering, graduation, birthday, dan event spesial Anda dengan standar estetika tertinggi.">
+    <title>TRILOGI MAKNA CREATIVE | Premium Documentation Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Custom Smooth Filter Transition */
+        .gallery-item {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gallery-item.hidden-item {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- HEADER / NAVIGATION BAR -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black/90 backdrop-blur-md border-b border-white/10 py-4">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex flex-col">
+                <span class="text-xl md:text-2xl font-black tracking-wider text-white">TRILOGI MAKNA</span>
+                <span class="text-[10px] md:text-xs font-light tracking-[0.3em] text-neutral-400">CREATIVE</span>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="#hero" class="text-white hover:text-neutral-400 transition-colors">Home</a>
+                <a href="#services" class="text-neutral-300 hover:text-white transition-colors">Services</a>
+                <a href="#portfolio" class="text-neutral-300 hover:text-white transition-colors">Portfolio</a>
+                <a href="#pricing" class="text-neutral-300 hover:text-white transition-colors">Pricing</a>
+                <a href="#contact" class="text-neutral-300 hover:text-white transition-colors">Contact</a>
+            </nav>
+
+            <!-- Desktop Call to Action Button -->
+            <div class="hidden md:block">
+                <a href="#contact" class="px-5 py-2.5 text-xs font-semibold tracking-wider text-black bg-white rounded-none hover:bg-neutral-200 transition-all duration-300 transform hover:-translate-y-0.5">
+                    BOOK NOW
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-1" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-b border-white/10 py-6 px-6 space-y-4 absolute left-0 w-full transition-all duration-300">
+            <a href="#hero" class="block text-lg font-medium text-white hover:text-neutral-400">Home</a>
+            <a href="#services" class="block text-lg font-medium text-neutral-300 hover:text-white">Services</a>
+            <a href="#portfolio" class="block text-lg font-medium text-neutral-300 hover:text-white">Portfolio</a>
+            <a href="#pricing" class="block text-lg font-medium text-neutral-300 hover:text-white">Pricing</a>
+            <a href="#contact" class="block text-lg font-medium text-neutral-300 hover:text-white">Contact</a>
+            <div class="pt-4 border-t border-white/10">
+                <a href="#contact" class="block w-full py-3 text-center font-bold text-black bg-white">BOOK NOW</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Asset with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- Smart Fallback: If your local file doesn't load in this preview, the placeholder will show beautifully -->
+            <img id="hero-bg" src="file:///C:/Users/Ikhwan%20Farhat/Documents/UNTUK%20WEBSITE/background.jpg" 
+                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1920';" 
+                 alt="Background" 
+                 class="w-full h-full object-cover">
+            <!-- Deep Premium Black Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-black/75 to-black/60"></div>
+        </div>
+        
+        <!-- Hero Content Box -->
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-8">
+            <span class="inline-block px-3 py-1 text-xs font-semibold tracking-widest text-neutral-400 border border-neutral-800 rounded-full mb-6 bg-neutral-900/40 backdrop-blur-sm">
+                DOCUMENTATION VENDOR
+            </span>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 text-white tracking-tight uppercase leading-none">
+                Abadikan Setiap <br><span class="text-neutral-400">Momen Anda</span>
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-neutral-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Vendor dokumentasi profesional untuk corporate, personal, dan event spesial Anda dengan standar estetika tertinggi.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 font-bold text-xs tracking-wider text-black bg-white hover:bg-neutral-200 transition-all duration-300 uppercase">
+                    Konsultasi Sekarang <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 font-bold text-xs tracking-wider text-white border border-white/20 hover:border-white hover:bg-white/5 transition-all duration-300 uppercase">
+                    Lihat Portofolio
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <a href="#services" class="text-white/50 hover:text-white transition-colors" aria-label="Scroll Down">
+                <i class="fa-solid fa-chevron-down text-xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION (EVENT CATEGORIES) -->
+    <section id="services" class="py-24 md:py-32 bg-[#0a0a0a] border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Layanan Kami</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white mt-3 uppercase tracking-tight">Kategori Event</h2>
+                <div class="w-16 h-1 bg-white mx-auto mt-4"></div>
+                <p class="text-neutral-400 mt-6 text-sm md:text-base leading-relaxed">Kami menawarkan solusi dokumentasi visual berkualitas tinggi yang disesuaikan dengan kebutuhan unik setiap acara Anda.</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: Corporate & Gathering -->
+                <div class="group bg-[#121212] border border-white/5 hover:border-white/20 transition-all duration-500 overflow-hidden relative p-8">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="mb-6 text-3xl text-neutral-400 group-hover:text-white transition-colors duration-500">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 group-hover:text-neutral-100 transition-colors">Corporate & Gathering</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6 group-hover:text-neutral-300 transition-colors">Dokumentasi formal perusahaan, rapat tahunan, seminar, serah terima jabatan, hingga event gathering santai karyawan.</p>
+                    <a href="#contact" class="inline-flex items-center text-xs font-bold tracking-wider text-white group-hover:text-neutral-400 transition-colors uppercase">
+                        Detail Layanan <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2: Graduation -->
+                <div class="group bg-[#121212] border border-white/5 hover:border-white/20 transition-all duration-500 overflow-hidden relative p-8">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="mb-6 text-3xl text-neutral-400 group-hover:text-white transition-colors duration-500">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 group-hover:text-neutral-100 transition-colors">Graduation</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6 group-hover:text-neutral-300 transition-colors">Sesi foto studio mandiri, dokumentasi perayaan wisuda formal, maupun pemotretan luar ruangan bersama keluarga terdekat.</p>
+                    <a href="#contact" class="inline-flex items-center text-xs font-bold tracking-wider text-white group-hover:text-neutral-400 transition-colors uppercase">
+                        Detail Layanan <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3: Birthday Party -->
+                <div class="group bg-[#121212] border border-white/5 hover:border-white/20 transition-all duration-500 overflow-hidden relative p-8">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="mb-6 text-3xl text-neutral-400 group-hover:text-white transition-colors duration-500">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 group-hover:text-neutral-100 transition-colors">Birthday Party</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6 group-hover:text-neutral-300 transition-colors">Tangkap keceriaan pesta ulang tahun anak-anak, pesta kedewasaan sweet seventeen, maupun makan malam intim hari jadi Anda.</p>
+                    <a href="#contact" class="inline-flex items-center text-xs font-bold tracking-wider text-white group-hover:text-neutral-400 transition-colors uppercase">
+                        Detail Layanan <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4: Other Events -->
+                <div class="group bg-[#121212] border border-white/5 hover:border-white/20 transition-all duration-500 overflow-hidden relative p-8">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="mb-6 text-3xl text-neutral-400 group-hover:text-white transition-colors duration-500">
+                        <i class="fa-solid fa-guitar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4 group-hover:text-neutral-100 transition-colors">Other Events</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6 group-hover:text-neutral-300 transition-colors">Liputan konser musik, dokumentasi olahraga, pameran seni, pernikahan, maupun gathering komunitas hobi Anda.</p>
+                    <a href="#contact" class="inline-flex items-center text-xs font-bold tracking-wider text-white group-hover:text-neutral-400 transition-colors uppercase">
+                        Detail Layanan <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="py-24 md:py-32 bg-black border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Karya Kami</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white mt-3 uppercase tracking-tight">Galeri Portofolio</h2>
+                <div class="w-16 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+
+            <!-- Portfolio Interactive Filters -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12">
+                <button class="filter-btn px-6 py-2.5 text-xs font-bold tracking-wider uppercase bg-white text-black transition-all" data-filter="all">ALL</button>
+                <button class="filter-btn px-6 py-2.5 text-xs font-bold tracking-wider uppercase border border-white/10 hover:border-white text-neutral-400 hover:text-white transition-all" data-filter="graduation">GRADUATION</button>
+                <button class="filter-btn px-6 py-2.5 text-xs font-bold tracking-wider uppercase border border-white/10 hover:border-white text-neutral-400 hover:text-white transition-all" data-filter="konser">KONSER</button>
+                <button class="filter-btn px-6 py-2.5 text-xs font-bold tracking-wider uppercase border border-white/10 hover:border-white text-neutral-400 hover:text-white transition-all" data-filter="sport">SPORT</button>
+                <button class="filter-btn px-6 py-2.5 text-xs font-bold tracking-wider uppercase border border-white/10 hover:border-white text-neutral-400 hover:text-white transition-all" data-filter="ultah">BIRTHDAY</button>
+                <button class="filter-btn px-6 py-2.5 text-xs font-bold tracking-wider uppercase border border-white/10 hover:border-white text-neutral-400 hover:text-white transition-all" data-filter="wedding">WEDDING</button>
+            </div>
+
+            <!-- Portfolio Grid (Must match requested assets exactly) -->
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- GRADUATE 1 -->
+                <div class="gallery-item group relative overflow-hidden bg-neutral-900 aspect-square cursor-pointer" data-category="graduation" onclick="openLightbox(this)">
+                    <img src="GRADUATE1.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800';" 
+                         alt="Graduate 1" 
+                         class="portfolio-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] tracking-widest text-neutral-400 font-bold uppercase mb-1">Graduation</span>
+                        <h4 class="text-lg font-bold text-white uppercase tracking-wider">Graduate 1</h4>
+                    </div>
+                </div>
+
+                <!-- GRADUATE 2 -->
+                <div class="gallery-item group relative overflow-hidden bg-neutral-900 aspect-square cursor-pointer" data-category="graduation" onclick="openLightbox(this)">
+                    <img src="GRADUATE2.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=800';" 
+                         alt="Graduate 2" 
+                         class="portfolio-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] tracking-widest text-neutral-400 font-bold uppercase mb-1">Graduation</span>
+                        <h4 class="text-lg font-bold text-white uppercase tracking-wider">Graduate 2</h4>
+                    </div>
+                </div>
+
+                <!-- KONSER 1 -->
+                <div class="gallery-item group relative overflow-hidden bg-neutral-900 aspect-square cursor-pointer" data-category="konser" onclick="openLightbox(this)">
+                    <img src="KONSER1.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&q=80&w=800';" 
+                         alt="Konser 1" 
+                         class="portfolio-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] tracking-widest text-neutral-400 font-bold uppercase mb-1">Concert</span>
+                        <h4 class="text-lg font-bold text-white uppercase tracking-wider">Konser 1</h4>
+                    </div>
+                </div>
+
+                <!-- SPORT 1 -->
+                <div class="gallery-item group relative overflow-hidden bg-neutral-900 aspect-square cursor-pointer" data-category="sport" onclick="openLightbox(this)">
+                    <img src="SPORT1.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=800';" 
+                         alt="Sport 1" 
+                         class="portfolio-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] tracking-widest text-neutral-400 font-bold uppercase mb-1">Sport</span>
+                        <h4 class="text-lg font-bold text-white uppercase tracking-wider">Sport 1</h4>
+                    </div>
+                </div>
+
+                <!-- SPORT 2 -->
+                <div class="gallery-item group relative overflow-hidden bg-neutral-900 aspect-square cursor-pointer" data-category="sport" onclick="openLightbox(this)">
+                    <img src="SPORT2.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80&w=800';" 
+                         alt="Sport 2" 
+                         class="portfolio-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] tracking-widest text-neutral-400 font-bold uppercase mb-1">Sport</span>
+                        <h4 class="text-lg font-bold text-white uppercase tracking-wider">Sport 2</h4>
+                    </div>
+                </div>
+
+                <!-- ULTAH 1 -->
+                <div class="gallery-item group relative overflow-hidden bg-neutral-900 aspect-square cursor-pointer" data-category="ultah" onclick="openLightbox(this)">
+                    <img src="ULTAH1.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=800';" 
+                         alt="Ultah 1" 
+                         class="portfolio-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] tracking-widest text-neutral-400 font-bold uppercase mb-1">Birthday</span>
+                        <h4 class="text-lg font-bold text-white uppercase tracking-wider">Ultah 1</h4>
+                    </div>
+                </div>
+
+                <!-- ULTAH 2 -->
+                <div class="gallery-item group relative overflow-hidden bg-neutral-900 aspect-square cursor-pointer" data-category="ultah" onclick="openLightbox(this)">
+                    <img src="ULTAH2.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=800';" 
+                         alt="Ultah 2" 
+                         class="portfolio-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] tracking-widest text-neutral-400 font-bold uppercase mb-1">Birthday</span>
+                        <h4 class="text-lg font-bold text-white uppercase tracking-wider">Ultah 2</h4>
+                    </div>
+                </div>
+
+                <!-- ULTAH 3 -->
+                <div class="gallery-item group relative overflow-hidden bg-neutral-900 aspect-square cursor-pointer" data-category="ultah" onclick="openLightbox(this)">
+                    <img src="ULTAH3.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=800';" 
+                         alt="Ultah 3" 
+                         class="portfolio-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] tracking-widest text-neutral-400 font-bold uppercase mb-1">Birthday</span>
+                        <h4 class="text-lg font-bold text-white uppercase tracking-wider">Ultah 3</h4>
+                    </div>
+                </div>
+
+                <!-- WEDDING 1 -->
+                <div class="gallery-item group relative overflow-hidden bg-neutral-900 aspect-square cursor-pointer" data-category="wedding" onclick="openLightbox(this)">
+                    <img src="WEDDING1.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800';" 
+                         alt="Wedding 1" 
+                         class="portfolio-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] tracking-widest text-neutral-400 font-bold uppercase mb-1">Wedding</span>
+                        <h4 class="text-lg font-bold text-white uppercase tracking-wider">Wedding 1</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ALUR KERJA / MENGAPA MEMILIH KAMI -->
+    <section class="py-24 md:py-32 bg-[#0a0a0a] border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                
+                <!-- Left Title Content -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Mengapa Kami</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight leading-tight">Momen Berharga <br>Pantas Diabadikan Dengan Sempurna</h2>
+                    <div class="w-16 h-1 bg-white mt-4"></div>
+                    <p class="text-neutral-400 leading-relaxed text-sm md:text-base">
+                        Setiap jepretan kamera dan rekam visual yang kami hasilkan tidak hanya sekadar gambar statis, namun terdapat memori berharga, kehangatan, serta estetika bernilai tinggi di dalamnya.
+                    </p>
+                    <div class="pt-4">
+                        <a href="#contact" class="px-6 py-3 bg-white text-black text-xs font-bold uppercase tracking-wider hover:bg-neutral-200 transition-all">
+                            Konsultasi Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Feature Points -->
+                <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Point 1 -->
+                    <div class="bg-[#121212] p-8 border border-white/5 hover:border-white/10 transition-colors">
+                        <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-xl text-white mb-6 border border-white/10">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">Peralatan Mutakhir</h4>
+                        <p class="text-neutral-400 text-sm leading-relaxed">Kami mengadopsi kamera mirrorless, sensor terbaru, lensa premium kelas dunia, serta peralatan pencahayaan terbaik untuk kualitas gambar tajam.</p>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="bg-[#121212] p-8 border border-white/5 hover:border-white/10 transition-colors">
+                        <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-xl text-white mb-6 border border-white/10">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">Tim Profesional</h4>
+                        <p class="text-neutral-400 text-sm leading-relaxed">Fotografer dan videografer tersertifikasi dengan jam terbang tinggi, handal mengarahkan gaya, serta terlatih mengabadikan momen spontan.</p>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="bg-[#121212] p-8 border border-white/5 hover:border-white/10 transition-colors">
+                        <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-xl text-white mb-6 border border-white/10">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">Ketepatan Waktu</h4>
+                        <p class="text-neutral-400 text-sm leading-relaxed">Kami memahami pentingnya efisiensi waktu. Pengiriman file pilihan, hasil editan (editing), dan album fisik selalu selesai tepat waktu.</p>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="bg-[#121212] p-8 border border-white/5 hover:border-white/10 transition-colors">
+                        <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-xl text-white mb-6 border border-white/10">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">Kurasi Estetika</h4>
+                        <p class="text-neutral-400 text-sm leading-relaxed">Proses grading warna dan pengeditan pasca-produksi dilakukan secara cermat demi hasil visual berkelas, timeless, serta eksklusif.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKSI PAKET HARGA (PRICING & PACKAGES) -->
+    <section id="pricing" class="py-24 md:py-32 bg-black border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Paket Layanan</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white mt-3 uppercase tracking-tight">Pricelist Paket</h2>
+                <div class="w-16 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Package 1: Basic -->
+                <div class="bg-[#121212] border border-white/5 p-8 flex flex-col justify-between transition-all duration-300 hover:border-white/20 relative">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-neutral-500">Personal Event</span>
+                        <h3 class="text-2xl font-black text-white uppercase mt-2">Basic Package</h3>
+                        <div class="w-12 h-[2px] bg-white/20 my-6"></div>
+                        <ul class="space-y-4 text-sm text-neutral-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> 1 Fotografer Profesional</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> 4 Jam Durasi Sesi Liputan</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> 50 Foto Terpilih (Edited)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Semua File Mentah via Google Drive</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Penyelesaian Maksimal 7 Hari Kerja</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-white/10">
+                        <p class="text-xs text-neutral-500 mb-2 font-medium">Mulai Dari</p>
+                        <p class="text-3xl font-black text-white mb-6">Rp 1.999.000</p>
+                        <a href="#contact" onclick="setPackage('Basic Package')" class="block w-full py-3.5 text-center text-xs font-bold tracking-wider text-white border border-white/20 hover:border-white hover:bg-white/5 transition-all uppercase">
+                            Pilih Paket
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2: Corporate (Popular) -->
+                <div class="bg-[#1a1a1a] border border-white/20 p-8 flex flex-col justify-between transition-all duration-300 hover:border-white/40 relative shadow-2xl scale-100 lg:scale-105 z-10">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 text-[10px] font-black tracking-widest uppercase rounded-full">
+                        RECOMMENDED
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-neutral-400">Premium Event</span>
+                        <h3 class="text-2xl font-black text-white uppercase mt-2">Corporate Package</h3>
+                        <div class="w-12 h-[2px] bg-white/30 my-6"></div>
+                        <ul class="space-y-4 text-sm text-neutral-200 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> 2 Fotografer + 1 Videografer</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Hingga 8 Jam Durasi Sesi Liputan</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> 100+ Foto Terpilih (High-end Edited)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Video Cinematic Highlight (2-3 Menit)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Exclusive Flashdisk & Drive Link</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Penyelesaian Maksimal 5 Hari Kerja</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-white/10">
+                        <p class="text-xs text-neutral-400 mb-2 font-medium">Mulai Dari</p>
+                        <p class="text-3xl font-black text-white mb-6">Rp 4.499.000</p>
+                        <a href="#contact" onclick="setPackage('Corporate Package')" class="block w-full py-3.5 text-center text-xs font-bold tracking-wider text-black bg-white hover:bg-neutral-200 transition-all uppercase">
+                            Pilih Paket <i class="fa-solid fa-chevron-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 3: Custom -->
+                <div class="bg-[#121212] border border-white/5 p-8 flex flex-col justify-between transition-all duration-300 hover:border-white/20 relative">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-neutral-500">Flexibility</span>
+                        <h3 class="text-2xl font-black text-white uppercase mt-2">Custom Package</h3>
+                        <div class="w-12 h-[2px] bg-white/20 my-6"></div>
+                        <ul class="space-y-4 text-sm text-neutral-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Durasi Fleksibel Sesuai Kebutuhan</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Tim Tambahan (Drone Pilot, Crane)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Opsi Cetak Album Fisik Eksklusif</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Penyesuaian Anggaran Fleksibel</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-xs text-white mr-3"></i> Sesi Brainstorming Konsep Matang</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-white/10">
+                        <p class="text-xs text-neutral-500 mb-2 font-medium">Mulai Dari</p>
+                        <p class="text-3xl font-black text-white mb-6">Hubungi Kami</p>
+                        <a href="#contact" onclick="setPackage('Custom Package')" class="block w-full py-3.5 text-center text-xs font-bold tracking-wider text-white border border-white/20 hover:border-white hover:bg-white/5 transition-all uppercase">
+                            Diskusikan Konsep
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & BOOKING FORM -->
+    <section id="contact" class="py-24 md:py-32 bg-[#0a0a0a] border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                
+                <!-- Contact Info Section (Left) -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Kontak Kami</span>
+                        <h2 class="text-3xl md:text-5xl font-black text-white mt-3 uppercase tracking-tight">KONSULTASI GRATIS</h2>
+                        <div class="w-16 h-1 bg-white mt-4 mb-8"></div>
+                        <p class="text-neutral-400 text-sm md:text-base leading-relaxed">
+                            Kami sangat bersemangat mendengar rencana luar biasa Anda. Jangan ragu untuk mendiskusikan konsep visual impian Anda bersama konsultan ahli kami secara gratis sekarang juga.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center text-white mr-4 shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-neutral-400">Surel Resmi</h5>
+                                <p class="text-white text-sm mt-1">info@trilogimakna.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center text-white mr-4 shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-neutral-400">Nomor Telepon / WhatsApp</h5>
+                                <p class="text-white text-sm mt-1">+62 812-3456-7890</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center text-white mr-4 shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-neutral-400">Studio & Kantor</h5>
+                                <p class="text-white text-sm mt-1">Kawasan Kreatif Jakarta, Blok M-3, DKI Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Section (Right) -->
+                <div class="lg:col-span-7 bg-[#121212] border border-white/5 p-8 md:p-12">
+                    <h3 class="text-2xl font-bold text-white mb-8 uppercase tracking-wide">Formulir Pemesanan</h3>
+                    <form id="booking-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="form-name" class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Nama Lengkap *</label>
+                                <input type="text" id="form-name" required class="w-full bg-neutral-900 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors" placeholder="Masukkan nama Anda">
+                            </div>
+                            <div>
+                                <label for="form-email" class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Alamat Email *</label>
+                                <input type="email" id="form-email" required class="w-full bg-neutral-900 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors" placeholder="nama@perusahaan.com">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="form-event" class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Jenis Acara *</label>
+                                <select id="form-event" required class="w-full bg-neutral-900 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors">
+                                    <option value="" disabled selected>Pilih jenis acara</option>
+                                    <option value="Corporate & Gathering">Corporate & Gathering</option>
+                                    <option value="Graduation (Kelulusan)">Graduation (Kelulusan)</option>
+                                    <option value="Birthday Party">Birthday Party</option>
+                                    <option value="Other Events">Other Events (Konser, Olahraga, dll.)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="form-date" class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Tanggal Acara *</label>
+                                <input type="date" id="form-date" required class="w-full bg-neutral-900 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label id="package-label" for="form-package" class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Paket Layanan (Opsional)</label>
+                            <select id="form-package" class="w-full bg-neutral-900 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors">
+                                <option value="" selected>Pilih Paket (Jika ada)</option>
+                                <option value="Basic Package">Basic Package</option>
+                                <option value="Corporate Package">Corporate Package</option>
+                                <option value="Custom Package">Custom Package</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="form-message" class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Pesan & Kebutuhan Tambahan</label>
+                            <textarea id="form-message" rows="4" class="w-full bg-neutral-900 border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors" placeholder="Tulis rincian lokasi acara atau konsep visual yang diinginkan..."></textarea>
+                        </div>
+
+                        <div class="pt-2 flex flex-col sm:flex-row gap-4">
+                            <button type="submit" class="w-full py-4 text-xs font-bold uppercase tracking-widest text-black bg-white hover:bg-neutral-200 transition-colors flex items-center justify-center">
+                                KIRIM PERMINTAAN <i class="fa-solid fa-paper-plane ml-2"></i>
+                            </button>
+                            <button type="button" onclick="sendDirectWhatsApp()" class="w-full py-4 text-xs font-bold uppercase tracking-widest text-white border border-[#25d366]/40 hover:border-[#25d366] bg-neutral-900 hover:bg-[#25d366]/10 transition-all flex items-center justify-center">
+                                HUBUNGI WHATSAPP <i class="fa-brands fa-whatsapp ml-2 text-lg text-[#25d366]"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 border-t border-white/10 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Branding -->
+                <div class="md:col-span-2 space-y-6">
+                    <a href="#hero" class="flex flex-col">
+                        <span class="text-2xl font-black tracking-wider text-white">TRILOGI MAKNA</span>
+                        <span class="text-xs font-light tracking-[0.3em] text-neutral-400">CREATIVE</span>
+                    </a>
+                    <p class="text-neutral-500 text-xs leading-relaxed max-w-sm">
+                        Kami adalah penyedia solusi dokumentasi visioner berdedikasi tinggi yang fokus menangkap detail, kehangatan emosional, dan estetika visual tingkat premium di setiap momen berharga Anda.
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase text-white tracking-widest mb-6">Tautan Navigasi</h4>
+                    <ul class="space-y-3 text-xs text-neutral-400">
+                        <li><a href="#hero" class="hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Layanan Acara</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Galeri Karya</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Paket Harga</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Kontak Kami</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase text-white tracking-widest mb-6">Media Sosial Kami</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-neutral-900 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-neutral-900 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-all">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-neutral-900 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-all">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="text-[10px] text-neutral-600">Terhubung bersama kami di media sosial untuk kurasi foto harian terbaru.</p>
+                </div>
+            </div>
+
+            <!-- Copyright and legal -->
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500 space-y-4 md:space-y-0">
+                <p>&copy; 2026 TRILOGI MAKNA CREATIVE. Seluruh hak cipta dilindungi undang-undang.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL FOR PORTFOLIO -->
+    <div id="lightbox-modal" class="fixed inset-0 bg-black/95 z-50 hidden flex-col justify-between items-center py-6 px-4">
+        <!-- Close button & Top bar -->
+        <div class="w-full flex justify-between items-center max-w-7xl px-4">
+            <span id="lightbox-caption" class="text-white text-xs font-bold uppercase tracking-widest">Graduate 1</span>
+            <button onclick="closeLightbox()" class="text-white hover:text-neutral-400 text-3xl focus:outline-none transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Image Content Zone -->
+        <div class="relative w-full max-w-5xl h-[70vh] flex justify-center items-center">
+            <!-- Navigation Left -->
+            <button onclick="navigateLightbox(-1)" class="absolute left-0 md:-left-16 text-white hover:text-neutral-400 text-3xl p-4 focus:outline-none transition-colors z-10" aria-label="Previous Image">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Main Image -->
+            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain border border-white/10">
+
+            <!-- Navigation Right -->
+            <button onclick="navigateLightbox(1)" class="absolute right-0 md:-right-16 text-white hover:text-neutral-400 text-3xl p-4 focus:outline-none transition-colors z-10" aria-label="Next Image">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Footer indicator / Category info -->
+        <div class="text-neutral-500 text-[10px] tracking-widest uppercase" id="lightbox-index">
+            1 OF 9
+        </div>
+    </div>
+
+    <!-- SUCCESS NOTIFICATION TOAST -->
+    <div id="toast-notification" class="fixed bottom-6 right-6 z-50 bg-white text-black px-6 py-4 flex items-center space-x-4 border-l-4 border-neutral-500 shadow-2xl hidden transition-transform duration-300 transform translate-y-20">
+        <div class="w-6 h-6 bg-black text-white flex items-center justify-center rounded-full text-xs">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <h5 class="text-xs font-black uppercase tracking-wider">Permintaan Terkirim!</h5>
+            <p class="text-[10px] text-neutral-600 mt-0.5">Kami akan segera menghubungi Anda dalam kurun waktu 1x24 jam.</p>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // 1. STICKY HEADER & NAV CONTROL
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-3', 'bg-black/95');
+                navbar.classList.remove('py-4', 'bg-black/90');
+            } else {
+                navbar.classList.add('py-4', 'bg-black/90');
+                navbar.classList.remove('py-3', 'bg-black/95');
+            }
+        });
+
+        // 2. MOBILE MENU DROPDOWN INTERACTION
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+
+        // Close dropdown when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.querySelector('i').className = 'fa-solid fa-bars text-2xl';
+            });
+        });
+
+        // 3. PORTFOLIO INTERACTIVE FILTER
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active classes
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-white', 'text-black');
+                    btn.classList.add('border', 'border-white/10', 'text-neutral-400');
+                });
+
+                // Set active class
+                button.classList.add('bg-white', 'text-black');
+                button.classList.remove('border', 'border-white/10', 'text-neutral-400');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filterValue === 'all' || category === filterValue) {
+                        item.classList.remove('hidden-item');
+                    } else {
+                        item.classList.add('hidden-item');
+                    }
+                });
+            });
+        });
+
+        // 4. PORTFOLIO LIGHTBOX FUNCTIONALITY
+        let currentLightboxIndex = 0;
+        let visibleGalleryElements = [];
+
+        function updateLightboxData() {
+            const currentItem = visibleGalleryElements[currentLightboxIndex];
+            const imgElement = currentItem.querySelector('img');
+            const captionText = currentItem.querySelector('h4').textContent;
+            
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const lightboxIndex = document.getElementById('lightbox-index');
+
+            lightboxImg.src = imgElement.src;
+            lightboxCaption.textContent = captionText;
+            lightboxIndex.textContent = `${currentLightboxIndex + 1} OF ${visibleGalleryElements.length}`;
+        }
+
+        function openLightbox(element) {
+            // Populate currently visible elements based on active filter
+            visibleGalleryElements = Array.from(galleryItems).filter(item => !item.classList.contains('hidden-item'));
+            currentLightboxIndex = visibleGalleryElements.indexOf(element);
+
+            if (currentLightboxIndex === -1) currentLightboxIndex = 0;
+
+            updateLightboxData();
+            
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        function navigateLightbox(direction) {
+            currentLightboxIndex += direction;
+            if (currentLightboxIndex >= visibleGalleryElements.length) {
+                currentLightboxIndex = 0;
+            } else if (currentLightboxIndex < 0) {
+                currentLightboxIndex = visibleGalleryElements.length - 1;
+            }
+            updateLightboxData();
+        }
+
+        // Close Lightbox via Escape Key
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('lightbox-modal');
+            if (!modal.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') navigateLightbox(1);
+                if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            }
+        });
+
+        // 5. PACKAGING UTILITY TRIGGER
+        function setPackage(packageName) {
+            const packageSelect = document.getElementById('form-package');
+            packageSelect.value = packageName;
+            // Scroll to form cleanly
+            const contactSection = document.getElementById('contact');
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 6. FORM SUBMISSION & WHATSAPP REDIRECTION LOGIC
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('form-name').value;
+            const email = document.getElementById('form-email').value;
+            const eventType = document.getElementById('form-event').value;
+            const eventDate = document.getElementById('form-date').value;
+            const packageSelected = document.getElementById('form-package').value || 'Tidak memilih spesifik';
+            const message = document.getElementById('form-message').value || 'Halo, saya ingin menanyakan lebih detail terkait paket dokumentasi Anda.';
+
+            // Constructing elegant WhatsApp prefilled content
+            const whatsappText = `Halo TRILOGI MAKNA CREATIVE, saya ingin mengajukan pemesanan dokumentasi resmi:
+            
+*Nama:* ${name}
+*Email:* ${email}
+*Jenis Acara:* ${eventType}
+*Tanggal Acara:* ${eventDate}
+*Pilihan Paket:* ${packageSelected}
+*Pesan Tambahan:* ${message}`;
+
+            const encodedText = encodeURIComponent(whatsappText);
+            const whatsappUrl = `https://wa.me/6281234567890?text=${encodedText}`;
+
+            // Trigger custom success notification toast
+            showToast();
+
+            // Open WhatsApp link shortly after toast display
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+                document.getElementById('booking-form').reset();
+            }, 1500);
+        }
+
+        function sendDirectWhatsApp() {
+            const name = document.getElementById('form-name').value || 'Klien';
+            const messageText = `Halo TRILOGI MAKNA CREATIVE, saya ingin melakukan konsultasi cepat dan memesan dokumentasi.`;
+            const encodedText = encodeURIComponent(messageText);
+            window.open(`https://wa.me/6281234567890?text=${encodedText}`, '_blank');
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast-notification');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-20');
+                toast.classList.add('translate-y-0');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0');
+                toast.classList.add('translate-y-20');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 300);
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
