@@ -251,10 +251,11 @@
             opacity: 0.75;
         }
         .gradient-text {
-            background: linear-gradient(135deg, #36E2F5, #A15FFC);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    background: linear-gradient(135deg, #36E2F5, #A15FFC);
+    -webkit-background-clip: text;
+    background-clip: text; /* <-- TAMBAHKAN BARIS INI */
+    -webkit-text-fill-color: transparent;
+}
         .card-highlight {
             border: 1px solid #36E2F5;
             box-shadow: 0 0 15px rgba(54, 226, 245, 0.2);
@@ -1118,141 +1119,144 @@
             </div>
             <!-- Pricing Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1: Basic Package -->
+                <!-- Card 1: Starter Package -->
                 <div class="group pricing-card bg-[#121212] border border-[#36E2F5]/20 hover:border-[#36E2F5]/40 transition-all duration-500 overflow-hidden relative p-8 flex flex-col h-full">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#36E2F5] to-[#A15FFC] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                     
-                        <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-white mb-2 uppercase tracking-wider">Basic Package</h3>
-                        <p class="text-neutral-400 text-sm">Paket dokumentasi dasar untuk acara kecil</p>
+                    <div class="mb-6 min-h-[132px]">
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#36E2F5] mb-3">Pricelist Event atau Gathering</p>
+                        <h3 class="text-2xl font-bold text-white uppercase tracking-wider">The Starter Package</h3>
+                        <p class="text-neutral-400 text-sm mt-3">Cocok untuk: Briefing, Half-Day Workshop, Intimate Gathering, Soft Launching, atau Mini Seminar.</p>
                     </div>
 
-                    <div class="mb-8">
-                        <span class="text-4xl font-black text-white">Hubungi</span>
-                        <p class="text-neutral-400 text-xs mt-1">untuk detail harga</p>
+                    <div class="mb-6 min-h-[64px]">
+                        <span class="text-3xl font-black text-[#36E2F5]">Rp 800.000 – Rp 1.500.000</span>
+                        <p class="text-neutral-400 text-xs mt-1">(Negotable)</p>
                     </div>
 
                     <ul class="space-y-3 mb-8 flex-grow text-sm text-neutral-300">
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Durasi: 2-4 jam</span>
+                            <span>Durasi cover: 3 – 4 jam</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Fotografi standar</span>
+                            <span>Sesi foto: unlimited shoots</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>50-100 foto edited</span>
+                            <span>60 foto edit utama + all master files</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>1 revisi gratis</span>
+                            <span>Akses Google Drive aktif 30 hari</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Format digital</span>
+                            <span>Free transport area Jabodetabek</span>
                         </li>
                     </ul>
 
-                    <button onclick="openPricingPDF('basic')" class="w-full py-3 font-bold text-xs tracking-wider text-white bg-[#36E2F5] hover:bg-[#2dc0ec] transition-all duration-300 uppercase">
+                    <button onclick="openPricingPDF('basic')" class="w-full py-3 font-bold text-xs tracking-wider text-white bg-[#36E2F5] hover:bg-[#2dc0ec] transition-all duration-300 uppercase rounded-md">
                         Lihat Detail PDF
                     </button>
                 </div>
 
-                <!-- Card 2: Standard Package (Featured) -->
+                <!-- Card 2: Basic Package (Featured) -->
                 <div class="group bg-[#121212] border-2 border-[#36E2F5]/40 hover:border-[#36E2F5] transition-all duration-500 overflow-hidden relative p-8 flex flex-col h-full transform md:scale-105">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-[#36E2F5] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#36E2F5] to-[#A15FFC] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                     
                     <!-- Popular Badge -->
                     <div class="absolute top-4 right-4 bg-[#A15FFC] text-black px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
                         Most Popular
                     </div>
 
-                    <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-white mb-2 uppercase tracking-wider">Standard Package</h3>
-                        <p class="text-neutral-400 text-sm">Paket dokumentasi profesional untuk acara besar</p>
+                    <div class="mb-6 min-h-[132px]">
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#36E2F5] mb-3">Pricelist Wedding dan Engagement</p>
+                        <h3 class="text-2xl font-bold text-white uppercase tracking-wider">BASIC</h3>
+                        <p class="text-neutral-400 text-sm mt-3">Paket dokumentasi praktis untuk kebutuhan sederhana namun tetap profesional.</p>
                     </div>
 
-                    <div class="mb-8">
-                        <span class="text-4xl font-black text-[#36E2F5]">Hubungi</span>
-                        <p class="text-neutral-400 text-xs mt-1">untuk detail harga</p>
+                    <div class="mb-6 min-h-[64px]">
+                        <span class="text-3xl font-black text-[#36E2F5]">Rp 900.000</span>
+                        <p class="text-neutral-400 text-xs mt-1">(Negotable)</p>
                     </div>
 
                     <ul class="space-y-3 mb-8 flex-grow text-sm text-neutral-300">
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Durasi: 4-8 jam</span>
+                            <span>Durasi maksimal 4 jam</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>2 fotografer profesional</span>
+                            <span>Unlimited photo (tanpa edit)</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>150-300 foto edited premium</span>
+                            <span>40+ foto edit</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Video highlight 3-5 menit</span>
+                            <span>1 photographer</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>3 revisi gratis</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Album cetak eksklusif</span>
+                            <span>All file via Google Drive</span>
                         </li>
                     </ul>
 
-                    <button onclick="openPricingPDF('standard')" class="w-full py-3 font-bold text-xs tracking-wider text-white bg-[#A15FFC] hover:bg-[#8d44ff] transition-all duration-300 uppercase">
+                    <button onclick="openPricingPDF('standard')" class="w-full py-3 font-bold text-xs tracking-wider text-white bg-[#36E2F5] hover:bg-[#2dc0ec] transition-all duration-300 uppercase rounded-md">
                         Lihat Detail PDF
                     </button>
                 </div>
 
-                <!-- Card 3: Premium Package -->
+                <!-- Card 3: Signature Package -->
                 <div class="group pricing-card bg-[#121212] border border-[#36E2F5]/20 hover:border-[#36E2F5]/40 transition-all duration-500 overflow-hidden relative p-8 flex flex-col h-full">
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#36E2F5] to-[#A15FFC] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                     
-                    <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-white mb-2 uppercase tracking-wider">Premium Package</h3>
-                        <p class="text-neutral-400 text-sm">Paket dokumentasi eksklusif all-in-one</p>
+                    <div class="mb-6 min-h-[132px]">
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#36E2F5] mb-3">Pricelist Graduation</p>
+                        <h3 class="text-2xl font-bold text-white uppercase tracking-wider">The Signature Package</h3>
+                        <p class="text-neutral-400 text-sm mt-3">Full Included</p>
                     </div>
 
-                    <div class="mb-8">
-                        <span class="text-4xl font-black text-white">Hubungi</span>
-                        <p class="text-neutral-400 text-xs mt-1">untuk detail harga</p>
+                    <div class="mb-6 min-h-[64px]">
+                        <span class="text-3xl font-black text-[#36E2F5]">Rp 400.000</span>
+                        <p class="text-neutral-400 text-xs mt-1"></p>
                     </div>
 
                     <ul class="space-y-3 mb-8 flex-grow text-sm text-neutral-300">
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Durasi: 8+ jam unlimited</span>
+                            <span>1 wisudawan + family</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Tim profesional (3+ fotografer)</span>
+                            <span>Family session</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>500+ foto edited eksklusif</span>
+                            <span>Durasi 60 menit</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Video cinematic full HD</span>
+                            <span>Unlimited shoots</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Revisi unlimited</span>
+                            <span>35 foto ter-edit</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
-                            <span>Album premium + USB custom</span>
+                            <span>All shared files on Google Drive aktif 30 hari</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-[#36E2F5] mr-3 mt-0.5 text-xs"></i>
+                            <span>Free transport Jabodetabek</span>
                         </li>
                     </ul>
 
-                    <button onclick="openPricingPDF('premium')" class="w-full py-3 font-bold text-xs tracking-wider text-white bg-[#36E2F5] hover:bg-[#2dc0ec] transition-all duration-300 uppercase">
+                    <button onclick="openPricingPDF('premium')" class="w-full py-3 font-bold text-xs tracking-wider text-white bg-[#36E2F5] hover:bg-[#2dc0ec] transition-all duration-300 uppercase rounded-md">
                         Lihat Detail PDF
                     </button>
                 </div>
@@ -2033,9 +2037,15 @@
         filterEbookCards();
 
         const pricingPdfUrls = {
-            basic: './pricelist-trilogi.pdf',
-            standard: './pricelist-trilogi.pdf',
-            premium: './pricelist-trilogi.pdf'
+            basic: './Pricelist%20TrilogiMaknaCreative.pdf',
+            standard: './pricelistWEDDING.pdf',
+            premium: './PRICELIST%20GRADUATION%202026%20.pdf.pdf'
+        };
+
+        const pricingPdfTitles = {
+            basic: 'Pricelist Event & Gathering',
+            standard: 'Pricelist Wedding & Engagement',
+            premium: 'Pricelist Graduation'
         };
 
         function openPricingPDF(packageKey) {
@@ -2055,7 +2065,7 @@
             viewer.src = pdfUrl;
             downloadBtn.href = pdfUrl;
             downloadLink.href = pdfUrl;
-            pdfTitle.textContent = `${packageKey.charAt(0).toUpperCase() + packageKey.slice(1)} Package`;
+            pdfTitle.textContent = pricingPdfTitles[packageKey] || `${packageKey.charAt(0).toUpperCase() + packageKey.slice(1)} Package`;
             fallback.classList.add('hidden');
             modal.classList.remove('hidden');
         }
