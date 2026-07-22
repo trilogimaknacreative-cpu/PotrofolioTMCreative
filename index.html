@@ -84,6 +84,86 @@
             letter-spacing: 0.01em;
             line-height: 1.8;
         }
+        @media (max-width: 768px) {
+            #hero {
+                padding-top: 5rem;
+                padding-bottom: 4rem;
+            }
+            #hero .grid {
+                gap: 1.75rem;
+            }
+            #hero .order-1,
+            #hero .order-2 {
+                width: 100%;
+            }
+            #hero .order-2 {
+                order: 1;
+            }
+            #hero .order-1 {
+                order: 2;
+            }
+            #hero h1 {
+                font-size: 2.8rem;
+                line-height: 1.05;
+            }
+            .hero-gradient-text {
+                font-size: 2.8rem;
+            }
+            .hero-description {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+            .hero-button-primary,
+            .hero-button-secondary {
+                width: 100%;
+            }
+            .hero-bg {
+                background-position: center top, center center;
+            }
+            .hero-bg section {
+                background-size: cover;
+            }
+            #hero .relative.h-96 {
+                position: relative;
+                height: auto;
+                min-height: 340px;
+            }
+            #hero .absolute.w-64,
+            #hero .absolute.w-56 {
+                position: absolute;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                width: 88% !important;
+                max-width: 360px !important;
+                right: auto !important;
+            }
+            #hero .absolute.w-64 {
+                top: 0 !important;
+                height: 300px !important;
+                transform: translateX(-50%) !important;
+            }
+            #hero .absolute.w-56 {
+                top: 220px !important;
+                width: 78% !important;
+                max-width: 320px !important;
+            }
+            #hero .absolute.top-0.right-0,
+            #hero .absolute.bottom-20.left-20 {
+                display: none;
+            }
+            #hero .flex.flex-col.sm\:flex-row {
+                flex-direction: column;
+            }
+            #hero .relative.h-96:hover {
+                transform: none;
+            }
+            .hero-button-primary {
+                justify-content: center;
+            }
+            .hero-button-secondary {
+                justify-content: center;
+            }
+        }
         .hero-button-primary {
             background: #36E2F5;
             color: #0C1014;
@@ -381,6 +461,7 @@
                     <!-- Main Heading -->
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
                         Capturing Stories<br><span class="hero-gradient-text">Crafting Brands</span>
+                    </h1>
 
                     <!-- Description -->
                     <p class="text-neutral-300 text-base md:text-lg leading-relaxed mb-8 max-w-xl font-light hero-description">
