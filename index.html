@@ -256,6 +256,13 @@
     background-clip: text; /* <-- TAMBAHKAN BARIS INI */
     -webkit-text-fill-color: transparent;
 }
+        /* Hero background image: gunakan gambar lokal `images/backgroun hero.jpg` jika ada; fallback ke Unsplash jika tidak. */
+        .hero-bg {
+            background-image: url('images/backgroun hero.jpg'), url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover, cover;
+            background-position: center center, center center;
+            background-repeat: no-repeat, no-repeat;
+        }
         .card-highlight {
             border: 1px solid #36E2F5;
             box-shadow: 0 0 15px rgba(54, 226, 245, 0.2);
@@ -345,7 +352,7 @@
     </div>
 
     <!-- HERO SECTION - ARTISTIC LAYOUT -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden bg-[#0a0a0a]">
+    <section id="hero" class="relative hero-bg min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden bg-[#0a0a0a]">
         <!-- Background Gradient -->
         <div class="absolute inset-0 bg-gradient-to-br from-black via-neutral-900 to-black opacity-60 z-0"></div>
         
@@ -366,7 +373,7 @@
 
                     <!-- Main Heading -->
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
-                        Creating Stories<br><span class="hero-gradient-text">Through Every Frame</span>
+                        Capturing Stories<br><span class="hero-gradient-text">Crafting Brands</span>
 
                     <!-- Description -->
                     <p class="text-neutral-300 text-base md:text-lg leading-relaxed mb-8 max-w-xl font-light">
